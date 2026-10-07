@@ -1,0 +1,83 @@
+:root {
+--primary: #2563eb;
+--bg: #f8fafc;
+--text: #1e293b;
+--radius: 8px;
+/* extra variables we will also use */
+--primary-dark: #1d4ed8;
+--surface: #ffffff;
+--border: #e2e8f0;
+--muted: #64748b;
+--space: 16px;
+}
+* { box-sizing: border-box; }
+body {
+margin: 0;
+font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+background: var(--bg);
+color: var(--text);
+line-height: 1.6;
+}
+h1, h2, h3 { line-height: 1.2; margin: 0 0 .5em; }
+header{
+    background-color: black;
+    height: 5vw;
+}
+
+
+header h1{
+    color: white ;
+    display: inline;
+}
+header div{
+   display: inline-flex;
+    justify-content: flex-end;
+    height: 3vw;
+    width: 50%;
+    margin-left : 15%;
+    margin-top: 1vw;
+    background-color: rgb(138, 138, 138);
+    border-radius: 20px;
+}
+main{
+    display: flex;
+    justify-content: space-between;
+    background-color:#f8fafc;
+    height: 25vw;
+    width: 80%;
+    margin-top: 4vw;  
+    margin-left: auto;
+    margin-right: auto;
+}
+.card{
+    width: 24%;
+    background-color:  rgb(214, 210, 210);;
+    border-radius: 20px;
+}
+.card h2{
+    text-align: center;
+    border-bottom: solid black 1px;
+}
+.card p{
+    text-align: center;
+}
+.card a{
+    width: 1vw;
+    height: 1vw;
+    text-align: center;
+    background-color: black;
+    border-radius: 20px;
+    text-decoration:none;
+    margin-top: 10vw;
+    margin-left: 6vw;
+}
+    
+
+pre{
+    display: inline;
+    color: white;
+}
+footer{
+
+}
+
