@@ -23,21 +23,48 @@ header{
     background-color: black;
     height: 5vw;
 }
-
-
-header h1{
-    color: white ;
-    display: inline;
+html{
+    font-size: 1.7vw;
 }
-header div{
-   display: inline-flex;
-    justify-content: flex-end;
-    height: 3vw;
-    width: 50%;
-    margin-left : 15%;
-    margin-top: 1vw;
-    background-color: rgb(138, 138, 138);
-    border-radius: 20px;
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    font-size: 2vw;
+    background-color: black;
+     height: 5vw;
+     width: 100%;
+    color : white;
+}
+nav h1{
+    display: inline-block;
+}
+
+
+
+nav #subHeader {
+    display: inline-flex ;
+    justify-content: space-around;
+    height: 5vw;
+    width: 40vw;
+    background-color: black;
+}
+nav  #subHeader a{
+    color: white;
+    margin-top: 0.8vw;
+    margin-bottom: 0.1vw;
+    text-decoration: none;
+    vertical-align: center;
+    font-size: 2vw;
+     transition: 0.3s;
+}
+nav #subHeader .nonCurrentPage:hover {
+    color: darkblue;
+    border-bottom: 0.5vw rgb(71, 73, 67) solid;
+}
+nav #subHeader .currentPage{
+    color: aqua;
+    border-bottom: aqua solid 0.5vw;
 }
 main{
     display: flex;
@@ -53,6 +80,7 @@ main{
     width: 24%;
     background-color:  rgb(214, 210, 210);;
     border-radius: 20px;
+     transition:  0.5s;
 }
 .card h2{
     text-align: center;
@@ -71,6 +99,7 @@ main{
     margin-top: 10vw;
     margin-left: 6vw;
     padding-bottom: 0.25vw;
+    transition: 0.3s;
     
 }
     
@@ -92,14 +121,71 @@ footer{
 
 }
 .card a:hover{
-    background-color: rgb(215, 50, 155);
+    background-color: rgb(42, 59, 212);
     color: back;
-    transition: 0.3s;
     border: 2px;
 }
 .card:hover{
     scale: 1.2;
     border : 0.5vw black solid;
-    transition: 0.3s 0.3s;
     
+}
+ @media (prefers-color-scheme: dark){
+    nav{
+        background-color: rgb(130, 1, 185);
+
+    }
+    nav #subHeader{
+        background-color: rgb(130, 1, 185);
+    }
+    nav #subHeader .nonCurrentPage:hover:hover{
+        color: blue;
+        border-bottom: 0.5vw white solid;
+    }
+    body{
+        background-color: #202124;
+    }
+    .btn{
+        background-color: white;
+        color: black;
+    }
+    .btn:hover{
+        background-color: blue;
+    }
+    .card{
+        background-color: black;
+        color: white;
+    }
+    .card .cardHeader {
+        border-bottom: 2px solid white;
+    }
+    .card .cardBody{
+         border-bottom: 2px solid white;
+    } 
+    main{
+        background-color: #202124;
+    }
+    .card a{
+        background-color: white;
+    }
+    .card a pre{
+         color: black
+    }
+    .card a:hover{
+        background-color: aqua;
+    }
+}
+@media(max-width : 600px) {
+    main{
+        flex-direction: column;
+        
+    }
+    .card {
+        margin-top: 5vw;
+    }
+}
+@media(max-width : 900px) {
+    main{
+        
+    }
 }

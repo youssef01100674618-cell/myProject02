@@ -20,16 +20,47 @@ line-height: 1.6;
 }
 h1, h2, h3 { line-height: 1.2; margin: 0 0 .5em; }
 
-header{
+html{
+    font-size: 1.7vw;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    font-size: 2vw;
     background-color: black;
-    height: 5vw;
+     height: 5vw;
+     width: 100%;
+    color : white;
+}
+nav h1{
+    display: inline-block;
 }
 
-header h1 {
-    color: white;
+
+
+nav #subHeader {
+    display: inline-flex ;
+    justify-content: space-around;
+    height: 5vw;
+    width: 40vw;
+    background-color: black;
 }
-#subHeader{
-    display: inline-flex;
+nav  #subHeader a{
+    color: white;
+    margin-top: 0.8vw;
+    margin-bottom: 0.1vw;
+    text-decoration: none;
+    vertical-align: center;
+    font-size: 2vw;
+     transition: 0.3s;
+}
+nav #subHeader .nonCurrentPage:hover {
+    color: rgb(221, 221, 229);
+    border-bottom: 0.5vw rgb(71, 73, 67) solid;
+}
+nav #subHeader .currentPage{
+    color: aqua;
+    border-bottom: aqua solid 0.5vw;
 }
 main{}
 
@@ -74,3 +105,42 @@ main #submain p{
     background-color: gray;
     color: whitesmoke;
 }
+@media (prefers-color-scheme: dark){
+    nav{
+        background-color: rgb(130, 1, 185);
+
+    }
+    nav #subHeader{
+        background-color: rgb(130, 1, 185);
+    }
+    nav #subHeader .nonCurrentPage:hover:hover{
+        color: blue;
+        border-bottom: 0.5vw white solid;
+    }
+    body{
+        background-color: #202124;
+    }
+    .btn{
+        background-color: white;
+        color: black;
+    }
+    .btn:hover{
+        background-color: blue;
+    }
+    .card{
+        background-color: black;
+        color: white;
+    }
+    .card .cardHeader {
+        border-bottom: 2px solid white;
+    }
+    .card .cardBody{
+         border-bottom: 2px solid white;
+    }
+    table .even{
+        background-color: red;
+    }
+    h2{
+        color: aqua;
+    }
+ }
